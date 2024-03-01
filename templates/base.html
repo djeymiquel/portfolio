@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- We use url_for to link a stylesheet named `style.css` within the folder 'static' here. -->
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='base.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='homepage.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='about.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='portfolio.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='contact.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='navigation.css') }}" />
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='footer.css') }}" />
+
+        <link rel="icon" href="{{ url_for('static', filename='favicon/test.jpg') }}">
+
+        <!-- Use Jinja to put a title here. --> 
+        <title> {{ title }} </title>
+    </head>
+    <body> 
+      <!-- Use a class for css to tap into this element for styling-->
+      <header>  
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Include section content using Jinja's include directive -->
+      <main class="flex-container">
+        <div class="content">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </main>
+
+      <!-- Footer section -->
+      <footer>
+        <p class="footer-copyright">Djey Miquel® 2023</p>
+      </footer>
+    </body>
+</html>
