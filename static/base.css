@@ -1,0 +1,40 @@
+/* The body element represent the main content of an HTML page */
+/* Its the area where all content goes and everything whats inside is what users see*/
+
+@font-face {
+  font-family: 'JetBrainsMonoNLNerdFont-Medium';
+  src: url('/static/fonts/JetBrainsMonoNLNerdFont-Medium.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030303;
+  font-family: "JetBrainsMonoNLNerdFont-Medium", monospace;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* HTML Container for all the HTML pages */
+.flex-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px; /* Adjust this value based on your header's height */
+  padding-bottom: 40px; /* Adjust this value based on your footer's height */
+}
+
+.content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
