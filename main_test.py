@@ -29,12 +29,3 @@ def test_portfolio_route():
     assert response.status_code == 200
     assert b"Portfolio" in response.data
 
-def test_skills_route():
-    response = client.get('/skills')
-    assert response.status_code == 200
-    assert b"Skills" in response.data
-
-def test_certificates_route():
-    response = client.get('/certificates')
-    assert response.status_code == 200
-    assert b"Certificates" in response.data

@@ -30,13 +30,3 @@ def portfolio():
     title = "Portfolio"
     return render_template('portfolio.html', title=title)
 
-@app.route('/skills', methods=['GET'])
-def skills():
-    title = "Skills"
-    return render_template('skills.html', title=title)
-
-@app.route('/certificates', methods=['GET'])
-def certificates():
-    title = "Certificates"
-    return render_template('certificates.html', title=title)
-
