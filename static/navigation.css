@@ -4,7 +4,7 @@
   width: 100%; /* covers the full width of the display */
   background-color: black;
   color: white; /* font color */
-  font-size: 20px;
+  font-size: 16px;
   position: fixed; /* Fixed position to keep it at the top */
   padding: 0px;
   top: 0;
