@@ -1,0 +1,44 @@
+/* The . represents the div class that i made for this instance the navbar */
+/* In this way i can tap into this element and style it to specific needs */
+.navbar {
+  width: 100%; /* covers the full width of the display */
+  background-color: black;
+  color: white; /* font color */
+  font-size: 20px;
+  position: fixed; /* Fixed position to keep it at the top */
+  padding: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 20px;
+
+}
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a:hover {
+  color: blue;
+}
+
